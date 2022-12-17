@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "96a5b9fc-d9c6-4830-902c-22a140ed6b88",
+		"name": "BlueWorks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20000275"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "table_number",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "service_charger",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "waiter_name",
+							"value": "ahmed",
+							"type": "text"
+						},
+						{
+							"key": "items[0][item_id]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "items[0][number_items]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "items[1][item_id]",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "items[1][number_items]",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"store"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "table_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "service_charger",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "waiter_name",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "items[0][item_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "items[0][number_items]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "items[1][item_id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "items[1][number_items]",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/order/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order",
+								"store"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 11:34:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 11:34:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"created successfully\",\n    \"data\": {\n        \"order\": {\n            \"id\": 13,\n            \"type\": 1,\n            \"created_at\": \"2022-12-17T11:34:02.000000Z\",\n            \"updated_at\": \"2022-12-17T11:34:02.000000Z\",\n            \"dine_in_order\": {\n                \"id\": 13,\n                \"order_id\": 13,\n                \"table_number\": 1,\n                \"service_charger\": 20,\n                \"waiter_name\": \"ahmed\",\n                \"created_at\": \"2022-12-17T11:34:02.000000Z\",\n                \"updated_at\": \"2022-12-17T11:34:02.000000Z\"\n            },\n            \"delivery_order\": null,\n            \"items_orders\": [\n                {\n                    \"id\": 17,\n                    \"item_id\": 1,\n                    \"order_id\": 13,\n                    \"number_items\": 3,\n                    \"item_price\": 200,\n                    \"created_at\": \"2022-12-17T11:34:02.000000Z\",\n                    \"updated_at\": \"2022-12-17T11:34:02.000000Z\"\n                },\n                {\n                    \"id\": 18,\n                    \"item_id\": 2,\n                    \"order_id\": 13,\n                    \"number_items\": 1,\n                    \"item_price\": 500,\n                    \"created_at\": \"2022-12-17T11:34:02.000000Z\",\n                    \"updated_at\": \"2022-12-17T11:34:02.000000Z\"\n                }\n            ]\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get String Input Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/alphabetic/index/AZA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"alphabetic",
+						"index",
+						"AZA"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get String Input Index",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/alphabetic/index/AZA",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"alphabetic",
+								"index",
+								"AZA"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 10:52:40 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 10:52:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"result\": 1353\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Count of Number Not 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/numbers/count/4/17",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"numbers",
+						"count",
+						"4",
+						"17"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Count of Numbers Not 5",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/numbers/count/4/17",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"numbers",
+								"count",
+								"4",
+								"17"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 10:53:11 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 10:53:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"result\": 12\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Nums Of Moves To be zero",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Get Nums Of Moves To be zero",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/get_num_moves_to_be_zeros",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_num_moves_to_be_zeros"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 11:37:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 17 Dec 2022 11:37:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"\",\n    \"data\": {\n        \"result\": [\n            3,\n            3\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
